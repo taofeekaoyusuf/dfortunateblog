@@ -1,0 +1,326 @@
+/*** INITIAL SETUP ***/
+:root {
+  --nigerian-green: #2d8003;
+  --white: #ffffff;
+  --lemon: #57e411;
+  --gold: #f0c70f;
+  --opaqueRed: #e5646e55;
+  --lightRed: #e5646e;
+  --darkRed: #d65361;
+  --lightYellow: #ffe07d;
+  --darkYellow: #ffd063;
+  --grey: #999;
+  --sky-blue: rgb(0, 57, 90);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*** WEB-LAYOUT ***/
+.blog-wrapper {
+  content: "";
+  background-image: url("../assets/images/cloudy-sky.jpg");
+  background-size: cover;
+  background-repeat: stretch;
+  background-position: center;
+  height: auto;
+  /* width: 80vw; */
+  padding: 10px 50px 20px;
+  margin: 0 175px 0 175px;
+  border-left: 5px solid rgb(100, 190, 218);
+  border-right: 5px solid rgb(100, 190, 218);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 1;
+
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+    "l l h h h h h h h h . ."
+    "m m c c c c c c c c s s"
+    "f f f f f f f f f f f f";
+}
+
+/** SECTIONS POSITIONING **/
+.logo {
+  grid-area: l;
+  justify-content: center;
+  align-items: end;
+  color: var(--sky-blue);
+  text-align: center;
+  /* border: 50px solid rgb(100, 190, 218); */
+}
+
+.fa-6x {
+  border: 1px solid var(--sky-blue);
+  background-color: var(--sky-blue);
+  fill: var(--sky-blue);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 40px 40px 250px 60px var(--sky-blue);
+}
+
+.header {
+  grid-area: h;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.headhover>a:hover {
+  color: rgb(100, 190, 218);
+}
+
+.headhover>i:hover {
+  color: yellow;
+}
+
+.menu {
+  margin-top: 75px;
+  grid-area: m;
+  margin-right: 15px;
+  border: 0.5px solid var(--sky-blue);
+  border-radius: 15px;
+  box-shadow: 40px 40px 250px 60px var(--sky-blue);
+}
+
+.spc>a:hover {
+  color: var(--gold);
+}
+
+.content {
+  grid-area: c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px 50px 20px;
+  border-radius: 15px;
+  box-shadow: 40px 40px 250px 60px var(--sky-blue);
+}
+
+.blogcontent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.h1-text {
+  color: rgb(0, 57, 90);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.5em;
+}
+
+.img-head {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 15px;
+  border: 2.5px solid rgb(1, 73, 95);
+}
+
+#txtimg {
+  color: rgb(1, 73, 95);
+}
+
+.contentlists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contentbody {
+  background-color: rgb(1, 73, 95);
+}
+
+.paragraphs {
+  padding: 25px;
+  text-align: justify;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.25em;
+  color: rgb(255, 255, 255);
+}
+
+.paragraphs>a:hover {
+  color: var(--gold)
+}
+
+.blognav {
+  display: inline-block flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.right {
+  float: right;
+  color: rgb(0, 57, 90);
+}
+
+.left {
+  float: left;
+  color: rgb(0, 57, 90);
+}
+
+
+.sidebar {
+  grid-area: s;
+  font-size: 0.75em;
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  border: 0.5px solid var(--sky-blue);
+  border-radius: 15px;
+  box-shadow: 40px 40px 250px 60px var(--sky-blue);
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar-text {
+  margin-top: 150px;
+  justify-content: flex-end;
+}
+
+.footer {
+  grid-area: f;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.75em;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  color: rgb(255, 255, 255);
+}
+
+/** SECTIONS FORMATING **/
+.blogname {
+  margin-right: auto;
+  color: var(--sky-blue)
+}
+
+.input-box {
+  margin-left: auto;
+  width: 75%;
+  border-radius: 7.5px;
+  border: 2px solid var(--sky-blue);
+  background-color: rgb(100, 190, 218);
+}
+
+.fa-search {
+  margin-left: -15px;
+}
+
+.logout {
+  margin: 0 5px 0 50px;
+  color: var(--sky-blue)
+}
+
+.body-touch {
+  margin-top: 75px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.spc {
+  margin-top: 50px;
+  color: var(--sky-blue)
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  text-emphasis: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+/** BLOG THUMBNAILS STYLING**/
+.blog {
+  text-align: center;
+  width: 250px;
+  height: 400px;
+  margin-top: 15px;
+  border: 1.5px solid var(--sky-blue);
+  border-radius: 15px;
+  box-shadow: -5px -5px var(--sky-blue);
+  /*rgb(53, 188, 241);*/
+}
+
+.image {
+  /* display: block; */
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid var(--sky-blue);
+}
+
+.text {
+  text-align: center;
+}
+
+.textbox {
+  width: 200px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.btn-rm {
+  border-radius: 7.5px;
+  border: 2px solid var(--white);
+  background-color: var(--sky-blue);
+  color: white;
+}
+
+
+/** SETTING SCREEN RESOLUTION FOR DIFFERENT DISPLAYS **/
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .blog-wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas:
+      "l l h h h h h h h h . ."
+      "m m c c c c c c c c s s"
+      "f f f f f f f f f f f f";
+  }
+
+  .logo {
+    grid-area: span 6;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {}
