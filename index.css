@@ -50,14 +50,14 @@ hr {
   font-size: 1rem;
 }
 
-.fa-6x{
+.fa-6x {
   margin-top: -70px;
   color: var(--white);
 }
 
 .subscription-form {
   width: 400px;
-  box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background: black;
   padding: 20px;
   margin: 5% auto 0;
@@ -68,7 +68,7 @@ hr {
 
 .subscription-form::before {
   content: "";
-  background-image: url("../assets/images/nature.jpg");
+  background-image: url("nature.jpg");
   background-size: cover;
   background-repeat: stretch;
   background-position: center;
